@@ -1,0 +1,10 @@
+1. ls		11. top		21. tail	31. mv
+2. cat		12. cal		22. vi		32. cp
+3. cd 		13. man		23. nano	33. find
+4. touch	14. help	24. pico	34. cut
+5. mkdir	15. who		25. echo	35. sort
+6. pwd		16. whoami	26. rmdir	36. ps
+7. date		17. diff	27. rm		37. pstree
+8. clear	18. less	28. w		38. jobs
+9. logout	19. more	29. chmod	39. grep
+10.tree		20. head	30. kill
