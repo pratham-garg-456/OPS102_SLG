@@ -1,0 +1,98 @@
+Q1. Write a script "area.bash" which will calculate the area. The user will input the name of the shape and its dimension through arguments but for now, your script will only be able to calculate the area of the rectangle.
+to run the script It will write:
+
+./area.bash rectangle 3 4
+
+it will output
+
+The area of the rectangle is: 12
+
+if I run the script without an argument like this ./area.bash
+it will say "I only know how to calculate the area of a rectangle"
+
+some more test cases below and their following output:
+
+./area.bash circle
+"I only know how to calculate the area of a rectangle"
+
+./area.bash rectangle
+"Invalid number of arguments"
+
+./area.bash rectangle 2
+"Invalid number of arguments"
+
+./area.bash rectangle 0 1
+"Arguments are invalid"
+
+./area.bash rectangle 1 0
+"Arguments are invalid"
+
+
+
+Q2. Write a Bash Shell script "login.sh" that does the following task in order:
+
+- Clears the screen
+
+- Displays "My username is: <YOUR-USERNAME>" (Make sure that you use an environment variable to get the username and not a Unix/Linux Command)
+
+- Display "Other users logged into a system are: <LIST OF ALL USERS>" (HINT: use Command Substitution here!! And show just the usernames of the users in a single line)
+
+- Prompts for a username and store it in a variable "username". (IMP: Do Not use the "echo" command)
+
+- Prompt for a password and store it in a variable "password" in a single line. (IMP: Must include "echo" command in addition to any other command used)
+
+- Display "valid user" if the username is equal to any of the users from the list and the password is equal to "secret". Otherwise Display "invalid user"
+
+
+------------------------------------------------------------------------
+Ans 1. 
+
+#!/usr/bin/bash
+
+if [[ "$1" == "rectangle" ]]
+then
+        if [[ $# -eq 3 ]]
+        then
+                if [[ $2 -gt 0 && $3 -gt 0 ]]
+                then
+                        echo "area of the rectangle is: $(($2*$3))"
+                else
+                        echo "Argument are invalid"
+                fi
+        else
+                echo "Invalid nnumber of arguments"
+        fi
+else
+        echo " I only know how to caculate rectagle"
+fi
+
+
+Ans2. 
+
+#!/bin/bash
+
+clear
+
+echo "My User name is: $USER"
+
+list=$(who | awk '{print$1}' | tr "\n" " ")
+# no space around = (equals)
+
+echo "Other users logged into the system are: $list"
+
+read -p "Please enter Username: " username
+
+echo -n "Please enter the password: "
+
+read password
+
+for x in $list
+
+do
+  if [[ $password == "secret" && $username == $x ]]
+      then
+        echo "Valid User"
+        exit
+  fi
+done
+echo "Invalid User"

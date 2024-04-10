@@ -1,0 +1,15 @@
+Mistakes:
+1. (( )) used this in if atatement
+2. didnot know how to access parameter
+3. shebang line #!/user/bin/bash
+4. used single = to compare string
+5. used -eq to compare strings
+6. forgot then after elif
+7. 
+
+Correction:
+1. use [[ ]] brackets
+2. $1 -> parameter one
+3. #!/usr/bin/bash
+4. use == to compare string
+5. use == to compare string
