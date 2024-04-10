@@ -1,0 +1,66 @@
+Q1. Write a script "intro.bash" which will print : My name is <put your first name here>. To do that first you have to create a variable which will store your name and then print the given line utilizing that variable.
+
+Q2. Write a script "quoted.bash" which will print this: This string contains a "quoted" string
+
+Q3. Write a script "currDate.bash" which will print this: The current date and time is: <put current date and time here>
+
+Q4. Write a script which will print this: There are <put number of file in current dir here> files in the courrent directory <put here your current directory name>
+For example: There are 2534 files in the current diectory /home/pgarg13/
+
+Q5. Write a script which will prompt user to enter a number if the number is less than 25 it will print "too low" if number is greater that 25 print "too high" and if number is equal to 25 print "you are the winner"
+
+Q6. Write a script which will check the number of arguments if the number of argument are not equals to 2 it will print : Error 2 arguments expected and exit with code 1
+
+Q7. Write a script "area.bash" which will calculate the area. The user will input name of the shape and its dimension through arguments but for now you script will only be able to calculate area of rectangle.
+to run the script I will write:
+./area.bash rectangle 3 4
+it will output
+Area of rectangle is: 12
+
+if I run script without argument like this ./area.bash
+it will say "I only know how to calculate area of rectangle"
+
+some more test cases below and their following output:
+
+./area.bash circle
+"I only know how to calculate area of rectangle"
+
+./area.bash rectangle
+"Invalid number of arguments"
+
+./area.bash rectangle 2
+"Invalid number of arguments"
+
+./area.bash rectangle 0 1
+"Arguments are invalid"
+
+./area.bash rectangle 1 0
+"Arguments are invalid"
+
+
+Q8. Write a Bash Shell script "login.sh" that does the following task in order:
+
+- Clears the screen
+
+- Displays "My username is: <YOUR-USERNAME>" (Make sure that you use environment variable to get the username and not a Unix/Linux Command)
+
+- Display "Other users logged into system are: <LIST OF ALL USERS>" (HINT: use Command Substitution here!! And show just the usernames of the users)
+
+- Prompts for a username and store it in a variable "username". (IMP: Do Not use "echo" command)
+
+- Prompt for a password and store it in a variable "password" in a single line. (IMP: Must include "echo" command in addition to any other command used)
+
+- Display "valid user" if username is equals to any of the user from the list and password is equals to "secret". Otherwise Display "invalid user"
+
+
+Ans1. 
+Ans2. use back slash in to print quotation
+Ans3. use $(date)
+Ans4. $(ls | wc -l) and $(pwd)
+Ans5. 
+ans6 $# -ne 2
+
+Ans7 who | cut -d' ' -f1 | tr '\n' ' '  -> to show username nicely
+then same this thing in for x in $(who | cut -d' ' -f1 | tr '\n' ' ')
+				if ( $x == userinput)
+
