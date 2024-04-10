@@ -1,0 +1,48 @@
+Q1. What is the first thing that we write on the top of a script file?
+
+Ans. #!/usr/bin/bash  OR #!/bin/bash -> shebang 
+
+Q2. What are the steps to create a bashscript file and run it.
+
+Ans. 
+1. create a text file (use touch command)
+2. use a text editor to start writing your script.
+3. write the shebang line.
+4. write you script
+5. save the file
+6. add the execute permission (chmod u+x filename)
+6. ./filename (ren the script)
+
+
+Q3. Write a Bash Shell script "login.sh" that does the following task in order:
+
+	- Clears the screen
+
+	- Displays "My username is: <YOUR-USERNAME>" (Make sure that you use environment variable to get the username and not a Unix/Linux Command)
+
+	- Display nicely "Other users logged into system are: <LIST OF ALL USERS>" (HINT: use Command Substitution here!!)
+
+	- Prompts for a username and store it in a variable "username". (IMP: Do Not use "echo" command)
+
+	- Prompt for a password and store it in a variable "password" in a single line. (IMP: Must include "echo" command in addition to any other command used)
+
+	- Display "valid user" if username is equals to "any of the username for thelist" and password is equals to "secret". Otherwise Display "invalid user"
+
+Q4. Write a Bash shell script "arguments.sh"
+
+The Bash Shell script will clear the screen and then display the following text (using special parameters):
+
+Number of argument are: (number of arguments )
+Here are the arguments:(displays of all argument)
+
+Q5.Write a Bash shell script that prompts the user for the sale price of an item and the number of items purchased.
+The shell script will display the total amount (eg. price x number of items) of the sale.
+For simplicity, you can assume prices are just integers.
+
+
+Ans1. #!/bin/bash or #!/usr/bin/bash
+Ans3. 
+Ans4. 
+cls
+echo "Number of argument are: $#"
+echo "Here are the arguments: $@"
