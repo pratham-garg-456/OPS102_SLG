@@ -1,0 +1,28 @@
+Try to write what each line or symbol will do in front of it. Also try to write what is its equivalent if any for linux. 
+
+mkdir folder -> 
+
+cd folder ->
+ 
+cd (just cd) -> 
+
+cls -> 
+
+notepad file -> 
+
+@echo off -> 
+
+set /p number=Enter your name: -> 
+
+set /a number=2*3 ->
+
+^ -> 
+
+%variableName% -> 
+
+%* -> 
+
+
+
+
+

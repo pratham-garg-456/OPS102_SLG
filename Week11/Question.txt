@@ -1,0 +1,83 @@
+Q1. Write the command to create a folder named as "window Scripting" and Write the command to go inside that folder.
+
+Q2. Write a script "intro.cmd" which will print: My name is <put your first name here>. To do that first, you have to create a variable which will store your name and then print the given line utilizing that variable.
+
+Q3. Write a script "special.cmd" which will print: You are speci&l.
+
+Q4. Write a script "cart.cmd" Which asks the user to enter the number of products and then asks the price of the product and displays the total price.
+Sample output: 
+Enter the number of products: 3
+Enter the price of the product: 5
+Total Price is: 15
+
+Q5. Write a script "guess.cmd" which will ask the user to input a number.
+if the number is less than 25 display two low, if the number is higher than 25 print too high, if the number is equal to 25 then display you are the winner!
+
+Q6. Write a script "arguments.cmd" which will display the following text (using Script parameters):
+
+Here are the arguments:(displays all the arguments)
+
+Q7. Write a script "counter.cmd" that counts from 1 to 10 in increments of 2 using a FOR /L loop.
+
+Q8. Write a script that iterates through all files in a directory and echoes each filename.
+
+
+
+Ans1. 
+mkdir windowScripting
+cd windowScripting
+
+Ans2. 
+notepad intro.cmd
+
+@echo off
+set name=Pratham Garg
+echo My name is %name%
+
+Ans3. 
+@echo off
+echo This line is speci^&l.
+
+Ans4. 
+@echo off
+
+set /p number=Enter the number of products: 
+set /p price=Enter the price of the product: 
+set /a total=number*price
+echo Total Price is : %total%
+
+Ans5. 
+@echo off
+
+set /p num=Enter a number of: 
+
+if %num% equ 25 (
+    echo You are the winner
+) else if %num% gtr 25 (
+    echo Number is too high
+) else (
+    echo Number is too low
+)
+
+Ans6. 
+@echo off
+
+echo Here are the arguments: %*
+
+Ans7. 
+@echo off
+for /L %%x in (1, 2, 10) do (
+    echo %%x
+)
+
+Ans8. 
+@echo off
+for %%F in (*) do (
+    echo %%F
+)
+
+
+
+
+
+
