@@ -6,6 +6,5 @@
 6. pwd		16. whoami	26. rmdir	36. ps
 7. date		17. diff	27. rm		37. pstree
 8. clear	18. less	28. w		38. jobs
-
 9. logout	19. more	29. chmod	39. grep
 10.tree		20. head	30. kill
